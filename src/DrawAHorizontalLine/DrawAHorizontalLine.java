@@ -5,10 +5,26 @@ package DrawAHorizontalLine;
  */
 public class DrawAHorizontalLine {
     public static void main(String[] args) {
-        int n = Integer.parseInt(args[0]);
+        int n;
+        try {
+            n = Integer.parseInt(args[0]);
+        } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
+            alertUserToBadInput();
+            return;
+        }
+
+        if (n < 0) {
+            alertUserToBadInput();
+            return;
+        }
+
         for (int i = 0; i < n; ++i) {
             System.out.print("*");
         }
         System.out.print("\n ");
+    }
+
+    private static void alertUserToBadInput() {
+        System.out.println("Please enter a positive integer at the command line");
     }
 }
