@@ -12,6 +12,12 @@ public class DrawAVerticalLine {
             alertUserToBadInput();
             return;
         }
+
+        if (n < 0) {
+            alertUserToBadInput();
+            return;
+        }
+
         for (int i = 0; i < n; ++i) {
             System.out.println("*");
         }
