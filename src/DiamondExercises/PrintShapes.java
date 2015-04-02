@@ -24,7 +24,11 @@ public class PrintShapes {
 
     public static void printDiamond(int n) {
         String output = buildTopOfDiamond(n);
+        output = buildBottomOfDiamond(n, output);
+        System.out.println(output);
+    }
 
+    private static String buildBottomOfDiamond(int n, String output) {
         for (int numSpaces = 1, numAsterisks = ((n - 1) * 2) - 1;
              numSpaces < n;
              numSpaces += 1, numAsterisks -= 2) {
@@ -32,7 +36,7 @@ public class PrintShapes {
             output = addNAsterisksToOutput(output, numAsterisks);
             output += "\n";
         }
-        System.out.println(output);
+        return output;
     }
 
     private static String addNAsterisksToOutput(String output, int numAsterisks) {
