@@ -1,20 +1,13 @@
 package DrawARightTriangle;
+import Helpers.ExercisesHelper;
 
 /**
  * Created by David on 4/2/2015.
  */
 public class DrawARightTriangle {
     public static void main(String[] args) {
-        int n;
-        try {
-            n = Integer.parseInt(args[0]);
-        } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
-            alertUserToBadInput();
-            return;
-        }
-
+        int n = ExercisesHelper.getFirstCommandLineArgAsInt(args);
         if (n < 0) {
-            alertUserToBadInput();
             return;
         }
 
@@ -26,9 +19,5 @@ public class DrawARightTriangle {
             output += "\n";
         }
         System.out.println(output);
-    }
-
-    private static void alertUserToBadInput() {
-        System.out.println("Please enter a positive integer at the command line");
     }
 }
