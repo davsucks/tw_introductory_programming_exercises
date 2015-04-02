@@ -39,6 +39,21 @@ public class PrintShapes {
         return output;
     }
 
+    public static void printDiamondWithName(int n) {
+        String output = buildTopOfDiamond(n);
+        output = replaceLastLineWithName(output);
+        output = buildBottomOfDiamond(n, output);
+        System.out.println(output);
+    }
+
+    private static String replaceLastLineWithName(String output) {
+        int indexJustBeforeLastNewline = output.lastIndexOf("\n") - 1;
+        int indexJustAfterSecondToLastLastNewline = output.lastIndexOf("\n", indexJustBeforeLastNewline) + 1;
+        output = output.substring(0, indexJustAfterSecondToLastLastNewline);
+        output += "David\n";
+        return output;
+    }
+
     private static String addNAsterisksToOutput(String output, int numAsterisks) {
         for (int j = 0; j < numAsterisks; ++j) {
             output += "*";
