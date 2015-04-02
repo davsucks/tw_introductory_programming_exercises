@@ -41,6 +41,14 @@ Given a number n, print a centered triangle. Example for n=3:
       *  
      ***  
     *****  
+    
+Example for n = 4
+
+       *        3 spaces, 1 ast
+      ***       2 spaces, 3 ast
+     *****      1 space,  5 ast
+    *******     0 spaces, 7 ast
+     
 
 Diamond
 -------
