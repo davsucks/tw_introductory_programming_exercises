@@ -16,9 +16,7 @@ public class PrintShapes {
              numSpaces >= 0;
              numSpaces -= 1, numAsterisks += 2) {
             output = addNSpacesToOutput(output, numSpaces);
-            for (int j = 0; j < numAsterisks; ++j) {
-                output += "*";
-            }
+            output = addNAsterisksToOutput(output, numAsterisks);
             output += "\n";
         }
         return output;
@@ -31,12 +29,17 @@ public class PrintShapes {
              numSpaces < n;
              numSpaces += 1, numAsterisks -= 2) {
             output = addNSpacesToOutput(output, numSpaces);
-            for (int j = 0; j < numAsterisks; ++j) {
-                output += "*";
-            }
+            output = addNAsterisksToOutput(output, numAsterisks);
             output += "\n";
         }
         System.out.println(output);
+    }
+
+    private static String addNAsterisksToOutput(String output, int numAsterisks) {
+        for (int j = 0; j < numAsterisks; ++j) {
+            output += "*";
+        }
+        return output;
     }
 
     private static String addNSpacesToOutput(String output, int numSpaces) {
