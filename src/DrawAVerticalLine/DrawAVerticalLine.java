@@ -1,20 +1,13 @@
 package DrawAVerticalLine;
+import Helpers.ExercisesHelper;
 
 /**
  * Created by David on 4/1/2015.
  */
 public class DrawAVerticalLine {
     public static void main(String[] args) {
-        int n;
-        try {
-            n = Integer.parseInt(args[0]);
-        } catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {
-            alertUserToBadInput();
-            return;
-        }
-
+        int n = ExercisesHelper.getFirstCommandLineArgAsInt(args);
         if (n < 0) {
-            alertUserToBadInput();
             return;
         }
 
@@ -25,7 +18,4 @@ public class DrawAVerticalLine {
         System.out.println(output);
     }
 
-    private static void alertUserToBadInput() {
-        System.out.println("Please enter a positive integer at the command line");
-    }
 }
