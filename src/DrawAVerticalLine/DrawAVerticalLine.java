@@ -18,9 +18,11 @@ public class DrawAVerticalLine {
             return;
         }
 
+        String output = "";
         for (int i = 0; i < n; ++i) {
-            System.out.println("*");
+            output += "*\n";
         }
+        System.out.println(output);
     }
 
     private static void alertUserToBadInput() {
