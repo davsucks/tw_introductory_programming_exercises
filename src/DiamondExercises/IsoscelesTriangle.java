@@ -12,13 +12,13 @@ public class IsoscelesTriangle {
         }
 
         String output = "";
-        for (int spaces = n - 1, asteriks = 1;
-             spaces >= 0;
-             spaces -= 1, asteriks += 2) {
-            for (int i = 0; i < spaces; ++i) {
+        for (int numSpaces = n - 1, numAsterisks = 1;
+             numSpaces >= 0;
+             numSpaces -= 1, numAsterisks += 2) {
+            for (int i = 0; i < numSpaces; ++i) {
                 output += " ";
             }
-            for (int j = 0; j < asteriks; ++j) {
+            for (int j = 0; j < numAsterisks; ++j) {
                 output += "*";
             }
             output += "\n";
