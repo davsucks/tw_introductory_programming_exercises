@@ -5,12 +5,12 @@ package DiamondExercises;
  */
 public class PrintShapes {
     public static void printIsoscelesTriangle(int n) {
-        String output = buildIsoscelesTriangle(n);
+        String output = buildTopOfDiamond(n);
 
         System.out.println(output);
     }
 
-    private static String buildIsoscelesTriangle(int n) {
+    private static String buildTopOfDiamond(int n) {
         String output = "";
         for (int numSpaces = n - 1, numAsterisks = 1;
              numSpaces >= 0;
@@ -23,7 +23,7 @@ public class PrintShapes {
     }
 
     public static void printDiamond(int n) {
-        String output = buildIsoscelesTriangle(n);
+        String output = buildTopOfDiamond(n);
 
         for (int numSpaces = 1, numAsterisks = ((n - 1) * 2) - 1;
              numSpaces < n;
