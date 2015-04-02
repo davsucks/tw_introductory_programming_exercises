@@ -18,10 +18,11 @@ public class DrawAHorizontalLine {
             return;
         }
 
+        String output = "";
         for (int i = 0; i < n; ++i) {
-            System.out.print("*");
+            output += "*";
         }
-        System.out.print("\n ");
+        System.out.println(output + "\n");
     }
 
     private static void alertUserToBadInput() {
