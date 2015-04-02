@@ -4,13 +4,13 @@ import Helpers.ExercisesHelper;
 /**
  * Created by David on 4/2/2015.
  */
-public class IsoscelesTriangle {
+public class Diamond {
     public static void main(String[] args) {
         int n = ExercisesHelper.getFirstCommandLineArgAsInt(args);
         if (n < 0) {
             return;
         }
 
-        PrintShapes.printIsoscelesTriangle(n);
+        PrintShapes.printDiamond(n);
     }
 }
