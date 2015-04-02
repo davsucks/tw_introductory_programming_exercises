@@ -22,7 +22,7 @@ public class DrawAHorizontalLine {
         for (int i = 0; i < n; ++i) {
             output += "*";
         }
-        System.out.println(output + "\n");
+        System.out.println(output);
     }
 
     private static void alertUserToBadInput() {
